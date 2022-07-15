@@ -1,13 +1,87 @@
 <section class="about">
-    <div class="container">
-        <p class="about__label-title">tradition and love</p>
-        <h2 class="about__title">how it's made?</h2>
-        <div class="about__img-wrapper"></div>
-        <div class="about__text-wrapper">
-            <p class="about__text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
-            <p class="about__text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
-            <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>
-            <button type="button" class="about__button">Read more</button>
-        </div>
+  <div class="container">
+    <p class="about__label-title">tradition and love</p>
+    <h2 class="about__title">how it's made?</h2>
+    <div class="about__wrapper">
+      <div class="about__img-wrapper">
+        <picture>
+          <source
+            srcset="
+              ./images/about/about-cow-mobile.webp    1x,
+              ./images/about/about-cow-mobile@2x.webp 2x,
+              ./images/about/about-cow-mobile@3x.webp 3x
+            "
+            type="image/webp"
+            media="(max-width:767px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-mobile.png    1x,
+              ./images/about/about-cow-mobile@2x.png 2x,
+              ./images/about/about-cow-mobile@3x.png 3x
+            "
+            type="image/png"
+            media="(max-width:767px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-tablet.webp    1x,
+              ./images/about/about-cow-tablet@2x.webp 2x,
+              ./images/about/about-cow-tablet@3x.webp 3x
+            "
+            type="image/webp"
+            media="(min-width:768px) and (max-width:1199px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-tablet.png    1x,
+              ./images/about/about-cow-tablet@2x.png 2x,
+              ./images/about/about-cow-tablet@3x.png 3x
+            "
+            type="image/png"
+            media="(min-width:768px) and (max-width:1199px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-desktop.webp    1x,
+              ./images/about/about-cow-desktop@2x.webp 2x,
+              ./images/about/about-cow-desktop@3x.webp 3x
+            "
+            type="image/webp"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-desktop.png    1x,
+              ./images/about/about-cow-desktop@2x.png 2x,
+              ./images/about/about-cow-desktop@3x.png 3x
+            "
+            type="image/png"
+            media="(min-width:1200px)"
+          />
+          <img src="./images/about/about-cow-mobile.png" alt="bio eco milk" />
+        </picture>
+      </div>
+      <div class="about__text-wrapper">
+        <p class="about__text">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+        <p class="about__text">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.
+        </p>
+        <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>
+        <button type="button" class="about__btn">
+          Read more
+          <svg class="about__btn-icon" height="8" width="4.43">
+            <use href="./images/icons.svg#icon-more"></use>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
 </section>

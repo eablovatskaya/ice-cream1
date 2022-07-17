@@ -1,6 +1,24 @@
 .footer {
   background-color: var(--secondary-bcg-color);
   padding-top: 40px;
+  position: relative;
+  @include desktop {
+    padding-top: 120px;
+  }
+}
+
+.footer__container {
+  padding-bottom: 40px;
+  // border-bottom: solid 1px #e5e5e5;
+  @include tablet {
+    padding-bottom: 60x;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include desktop {
+    padding-bottom: 60x;
+  }
 }
 
 .footer__title-box {
@@ -8,6 +26,7 @@
   margin-bottom: 40px;
   @include tablet {
     max-width: 340px;
+    margin-bottom: 0;
   }
   @include desktop {
     max-width: 477px;
@@ -54,11 +73,9 @@
   }
 }
 
-// .footer__box {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: right;
-// }
+.footer__box {
+}
+
 ///////////////////////////////
 
 .social {
@@ -84,6 +101,10 @@
 
 .social__icon {
   fill: currentColor;
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .social__link {
@@ -93,25 +114,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-text-white);
-  color: var(--color-svg-gray);
+  background-color: #fea5bb;
+  color: var(--bcg-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social__link:hover,
 .social__link:focus {
-  background-color: var(--color-accent);
-  color: var(--color-text-white);
-}
-.social__link--footer {
-  background-color: #ffffff1a;
-  color: var(--color-text-white);
+  background-color: var(--title-color);
 }
 
 ///////////////////////////////
 .footer__text {
   text-align: right;
+  font-family: var(--standard-ff);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  &--tel {
+    color: var(--title-color);
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .footer__Rights {
@@ -125,16 +156,36 @@
   margin-top: 16px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 3px;
   @include tablet {
     line-height: 1.86;
     letter-spacing: 0.02em;
     max-width: 278px;
     margin-top: 7px;
+    padding-bottom: 4px;
+  }
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  bottom: 61px;
+  @include tablet {
+    bottom: 37px;
   }
   @include desktop {
-    line-height: 1.86;
-    letter-spacing: 0.02em;
-    max-width: 278px;
-    margin-top: 7px;
+    max-width: 1167px;
+    margin: 0 auto;
+    right: Calc((100% - 1167px) / 2);
+  }
+}
+
+.footer > .cotainer {
+  padding-bottom: 3px;
+  @include tablet {
+    padding-bottom: 4px;
   }
 }

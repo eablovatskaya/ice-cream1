@@ -1,41 +1,91 @@
-<header>
-    <a href="" class="logo__link">
-        <svg class="logo__icon">
-            <use></use>
-        </svg>
-    </a>
-    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="menu-open-icon" width="20" height="12">
-            <use></use>
-        </svg>
-    </button>
-    <div class="menu">
-        <ul class="menu__list">
-            <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="" class="menu__link">About us</a></li>
-            <li class="menu__item"><a href="" class="menu__link">How it’s made?</a></li>
-            <li class="menu__item"><a href="" class="menu__link">Our products</a></li>
-            <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
-        </ul>
-    </div>
-    <button class="menu-btn">Buy now</button>
-    <h1 class="header__title">Ice cream made with passion</h1>
-    <button class="header-btn__prod">Products</button>
-    <button class="header-btn__about">How it's made</button>
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <a href="" class="logo__link">
+                <svg class="logo__icon" width="199" height="50">
+                    <use href="/src/images/icons.svg#icon-logo"></use>
+                </svg>
+            </a>
+            <div class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">How it’s made?</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Our products</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+                </ul>
+            </div>
+            <button class="menu-toggle open-tab js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-open-icon" width="20" height="12">
+                    <use href="/src/images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <button class="menu-btn menu-btn--desk">
+                <span class="menu-btn__text">Buy now</span>
+                <svg class="menu-btn__icon">
+                    <use href="/src/images/icons.svg#icon-more"></use>
+                </svg>
+            </button>
+        </nav>
+        <span class="pink-ellips"></span>
+        <picture>
+            <source
+                srcset="/src/images/hero/hero-icecream-mobile.png 1px, /src/images/hero/hero-icecream-mobile@2x.png 2x, /src/images/hero/hero-icecream-mobile@3x.png 3x"
+                media="(max-width: 767px)">
+            <source
+                srcset="/src/images/hero/hero-icecream-tablet.png 1px, /src/images/hero/hero-icecream-tablet@2x.png 2x, /src/images/hero/hero-icecream-tablet@3x.png 3x"
+                media="(min-width: 768px) and (max-width: 1199px)">
+            <source
+                srcset="/src/images/hero/hero-icecream-desktop.png 1px, /src/images/hero/hero-icecream-desktop@2x.png 2x, /src/images/hero/hero-icecream-desktop@3x.png 3x"
+                media="(min-width: 1200px)">
+            <img class="hero__ice" src="/src/images/hero/hero-icecream-mobile.png" alt="Рожок с мороженым">
+        </picture>
+        <div class="hero">
+            <div class="hero-basic">
+                <h1 class="header__title">Ice cream made with <span class="header__title--big">passion</span></h1>
+                <button class="header-btn__prod">Products</button>
+                <button class="header-btn__about">How it's made</button>
+            </div>
+            <ul class="hero-stat">
+                <li class="hero-stat__item">
+                    <p class="hero-stat__amount">16</p>
+                    <p class="hero-stat__label">cafes</p>
+                </li>
+                <li class="hero-stat__item">
+                    <p class="hero-stat__amount">23</p>
+                    <p class="hero-stat__label">food trucks</p>
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <p class="details__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et</p>
+            <button type="button" class="details__btn">
+                <svg class="icon-arrow">
+                    <use href="/src/images/icons.svg#icon-arrow-right"></use>
+                </svg>
+            </button>
+        </div>
 
-    <div class="menu-container">
-        <button class="menu-toggle js-close-menu">
-            <svg class="menu-close-icon" width="14" height="14">
-                <use></use>
-            </svg>
-        </button>
-        <button class="menu-btn">Buy now</button>
-        <ul class="menu__list">
-            <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="" class="menu__link">About us</a></li>
-            <li class="menu__item"><a href="" class="menu__link">How it’s made?</a></li>
-            <li class="menu__item"><a href="" class="menu__link">Our products</a></li>
-            <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
-        </ul>
     </div>
 </header>
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle close-tab js-close-menu">
+        <svg class="menu-close-icon" width="14" height="14">
+            <use href="/src/images/icons.svg#icon-close"></use>
+        </svg>
+    </button>
+    <button class="menu-btn menu-btn--mob">
+        <span class="menu-btn__text">Buy now</span>
+        <svg class="menu-btn__icon">
+            <use href="/src/images/icons.svg#icon-more"></use>
+        </svg>
+    </button>
+    <ul class="menu__list">
+        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+        <li class="menu__item"><a href="" class="menu__link">About us</a></li>
+        <li class="menu__item"><a href="" class="menu__link">How it’s made?</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Our products</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+    </ul>
+</div>
